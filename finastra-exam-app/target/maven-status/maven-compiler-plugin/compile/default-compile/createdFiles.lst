@@ -1,0 +1,3 @@
+org\finastra\exam\app\main\FinastraExamApplication.class
+org\finastra\exam\app\service\PacsAggregateService.class
+org\finastra\exam\app\util\JaxbUnmarshaller.class

@@ -1,0 +1,2 @@
+run mvn clean package to generate jar
+run java -jar finstra-exam-app-0.0.1-SNAPSHOT-spring-boot.jar "file" example java -jar finstra-exam-app-0.0.1-SNAPSHOT-spring-boot.jar "C:\Users\Jr Mangulabnan\Documents\finastra-exam\finastra-exam\finastra-exam-app\pacs008.xml"

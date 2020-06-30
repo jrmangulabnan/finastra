@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<pacs008>
+	<document>
+		<grpHdr>
+			<msgId>1</msgId>
+		</grpHdr>
+		<cdtTrfTxInf>
+			<intrBkSttlmAmt>20</intrBkSttlmAmt>
+		</cdtTrfTxInf>
+	</document>
+	<document>
+		<grpHdr>
+			<msgId>2</msgId>
+		</grpHdr>
+		<cdtTrfTxInf>
+			<intrBkSttlmAmt>40</intrBkSttlmAmt>
+		</cdtTrfTxInf>
+	</document>
+</pacs008>

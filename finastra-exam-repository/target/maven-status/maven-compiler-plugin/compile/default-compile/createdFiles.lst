@@ -1,0 +1,6 @@
+org\finastra\exam\config\RepositoryConfig.class
+org\finastra\exam\repository\data\Pacs008$GrpHdr.class
+org\finastra\exam\repository\data\Pacs008.class
+org\finastra\exam\repository\PacsRepository.class
+org\finastra\exam\repository\data\Pacs008$Document.class
+org\finastra\exam\repository\data\Pacs008$CdtTrfTxInf.class

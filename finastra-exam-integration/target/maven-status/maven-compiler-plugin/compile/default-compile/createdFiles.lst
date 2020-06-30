@@ -1,0 +1,3 @@
+org\finastra\exam\integration\amq\AmqSender.class
+org\finastra\exam\integration\config\JmsConfig.class
+org\finastra\exam\integration\dto\PacsTopic.class
