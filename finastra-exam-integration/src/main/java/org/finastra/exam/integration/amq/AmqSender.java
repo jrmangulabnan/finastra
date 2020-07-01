@@ -14,7 +14,7 @@ public class AmqSender {
 	JmsTemplate jmsTemplate;
 
 	public void sendMessage(final String message) {
-        Map<String, Object> map = new HashMap(); 
+        Map<String, Object> map = new HashMap<String, Object>(); 
         map.put("totalInterbankSettlementAmount", message);
 		jmsTemplate.convertAndSend(message);
 	}

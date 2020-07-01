@@ -14,7 +14,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+		<spring-boot.version>2.3.1.RELEASE</spring-boot.version>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
@@ -39,6 +39,11 @@
 			<groupId>com.finastra</groupId>
 			<artifactId>finastra-exam-integration</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
 		</dependency>
 	</dependencies>
 
