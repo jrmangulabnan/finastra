@@ -28,14 +28,18 @@ public class PacsRepository {
 	 * @param pacs008
 	 * @throws SQLException 
 	 */
-	public int[] save(Pacs008 pacs008) throws SQLException {
-		PreparedStatement ps = dataSource.getConnection().prepareStatement("INSERT INTO PACS008 VALUES (?, ?)");
-		for (Pacs008.Document document : pacs008.getDocument()) {
-			ps.setString(1, document.getGrpHdr().getMsgId());
-			ps.setLong(2, document.getCdtTrfTxInf().getIntrBkSttlmAmt());
-			ps.addBatch();
+	public void save(Pacs008 pacs008) throws SQLException{
+		try {
+			PreparedStatement ps = dataSource.getConnection().prepareStatement("INSERT INTO PACS008 VALUES (?, ?)");
+			for (Pacs008.Document document : pacs008.getDocument()) {
+				ps.setString(1, document.getGrpHdr().getMsgId());
+				ps.setLong(2, document.getCdtTrfTxInf().getIntrBkSttlmAmt());
+				ps.addBatch();
+			}
+			ps.executeBatch();	
+		} catch (SQLException e) {
+			throw e;
 		}
-		return ps.executeBatch();
 	}
 
 	/**
