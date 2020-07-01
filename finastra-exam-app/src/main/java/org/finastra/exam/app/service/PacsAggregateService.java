@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 /**
  * This class will centralize all the service from integration and repository
@@ -31,8 +34,11 @@ public class PacsAggregateService implements CommandLineRunner {
 	public void readFile(String file) {
 		try {
 			Pacs008 pacs008 = JaxbUnmarshaller.unmarshalPacs008(file);
-			pacsRepository.save(pacs008);
-			amqSender.sendMessage(String.valueOf(pacsRepository.getTotalInterbankSettlementAmount()));
+			int[] result = pacsRepository.save(pacs008);
+			
+			if (result.length != 0) {
+				amqSender.sendMessage(String.valueOf(pacsRepository.getTotalInterbankSettlementAmount()));
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
