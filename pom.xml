@@ -51,7 +51,7 @@
 						<configuration>
 							<classifier>spring-boot</classifier>
 							<mainClass>
-								org.finastra.exam.app.main.FinastraExamApplication
+								org.finastra.exam.FinastraExamApplication
 							</mainClass>
 						</configuration>
 					</execution>
